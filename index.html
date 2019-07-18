@@ -1,24 +1,24 @@
-<html>
-<head>
-<script>
-function show(shown, hidden) {
-  document.getElementById(shown).style.display='block';
-  document.getElementById(hidden).style.display='none';
-  return false;
-}
-</script>
-</head>
-<body>
+jQuery(document).ready(function() {
+  jQuery('.main_tabs .tabs a').on('click', function(e) {
+    e.preventDefault();
+    switch (this.parentNode.id) {
+    // -----^-- get parent node and it's id
+      case "home_tab":
+        window.location.href = "html/1984_viz.html";
+        break;
+      case "other_tab":
+        window.location.href = "html/1985_viz.html";
+        break;
+    }
+  });
+});
 
-  <div id="Page1">
-    1984
-    <a href="html/1984_viz.html" onclick="return show('Page2','Page1');">Show page 2</a>
-  </div>
-
-  <div id="Page2" style="display:none">
-    1985
-    <a href="html/1985_viz.html" onclick="return show('Page1','Page2');">Show page 1</a>
-  </div>
-
-</body>
-</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<div class="main_tabs">
+  <ul class="tabs">
+    <li id="home_tab"><a href="html/1984_viz.html">1984</a>
+    </li>
+    <li id="other_tab"><a href="html/1985_viz.html">1985</a>
+    </li>
+  </ul>
+</div>
