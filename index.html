@@ -1,19 +1,24 @@
+<html>
+<head>
+<script>
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+</script>
+</head>
+<body>
 
-<HTML>
-	<HEAD>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<TITLE>Single Year LDA visualizations</TITLE>
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
-		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.css">
-	</HEAD>
-	<BODY>
-		<button class="collapsible">90</button>
-		<div class="content">
-			<div w3-include-html="content.html"></div>
-		</div>
-		<script src="/js/style.js"></script>
-	</BODY>
-</HTML>
-  
+  <div id="Page1">
+    Content of page 1
+    <a href="pics/colors.jpg" onclick="return show('Page2','Page1');">Show page 2</a>
+  </div>
 
+  <div id="Page2" style="display:none">
+    Content of page 2
+    <a href="pics/darth_vader_logo.png" onclick="return show('Page1','Page2');">Show page 1</a>
+  </div>
 
+</body>
+</html>
