@@ -1,9 +1,15 @@
 li {
-    background-color: #557A95;
-    color: white;
-    padding: 1em 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
+  border-radius: 8px;
+  background-color: #557A95;  	
+  border: none;
+  color: white; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Arial";
+  cursor: pointer;
 }
 
 li:hover {
