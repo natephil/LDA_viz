@@ -1,27 +1,27 @@
 li {
-    background-color: red;
-  color: white;
-  padding: 1em 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
+    background-color: #557A95;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 li:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
 li:active {
-  background-color: black;
+    background-color: black;
 }
 
 li:visited {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 /* Non-Demo Styles */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
