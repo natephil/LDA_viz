@@ -2,7 +2,7 @@ body {
 	background-color: ghostwhite;
 }
 
-a {
+li {
     background-color: red;
   color: white;
   padding: 1em 1.5em;
@@ -10,15 +10,15 @@ a {
   text-transform: uppercase;
 }
 
-a:hover {
-  background-color: #555;
+li:hover {
+	opacity: 0.5;
 }
 
-a:active {
+li:active {
   background-color: black;
 }
 
-a:visited {
+li:visited {
   background-color: #ccc;
 }
 
