@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LDA Topic Modeling</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-	<script src="js/tab_style.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	background-color: ghostwhite;
+}
+li {
+/* 	background-color: red; */
+	background-color: #557A95;
+	color: white;
+/* 	padding: 1em 1.5em; */
+	padding: 15px 32px;
+	text-decoration: none;
+	display: inline-block;
+/* 	display: flex; */
+	font-size: 16px;
+	font-family: "Arial";
+	cursor: pointer;
+/* 	position: relative; */
+	position: absolute;
+}
+
+li:hover {
+	opacity: 0.5;
+}
+
+li:active {
+/*   background-color: black; */
+	opacity: 0.75
+}
+
+li:visited {
+/*   background-color: #ccc; */
+  background-color: black;
+}
+.collapsible {
+  background-color: #107896;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+/*   background-color: #555; */
+  opacity: 0.5;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
 </head>
 <body>
+<h2>LDA visualizations</h2>
   <div class="main_tabs">
   <ul class="tabs">
     <li id="tab"><a href="html/1984_viz.html">1984</a>
@@ -55,19 +110,35 @@
 	  
   </ul>
 </div>
-	<br><br>
 
-<button class="collapsible"> cosine similarity of "aids" & "sexual" </button>
-	<div class="content">
-		<P><B>testing 1...</B></P>
-		<IMG SRC="pics/cos_eucld_aids_sexual.png"></IMG>
-	</div>
-	<br><br>
-<button class="collapsible"> cosine similarity of "aids" & "gay" </button>
-	<div class="content">
-		<P><B>testing 2...</B></P>
-		<IMG SRC="pics/cos_eucl_aids_gay.png"></IMG>
-	</div>
-	<br><br>
-	</body>
+  
+<h2>word2vec visualizations</h2>
+
+<button class="collapsible">cosine similarity of "aids" and "sexual" (1982-1995)</button>
+<div class="content">
+  <img src="pics/cos_eucld_aids_sexual.png"</img>
+</div>
+<button class="collapsible">cosine similarity of "aids" and "gay" (1982-1995)</button>
+<div class="content">
+  <img src="pics/cos_eucl_aids_gay.png"></img>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
 </html>
