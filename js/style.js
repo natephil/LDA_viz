@@ -12,3 +12,8 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+function afterAngularOrReactHasCreatedAllDOM (){
+    // Manually make all DOM with .collapsible collapsible 
+    $('.collapsible').collapsible();
+}
