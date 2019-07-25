@@ -9,8 +9,8 @@ li {
 /* 	padding: 1em 1.5em; */
 	padding: 15px 32px;
 	text-decoration: none;
-/* 	display: inline-block; */
-	display: flex;
+	display: inline-block;
+/* 	display: flex; */
 	font-size: 16px;
 	font-family: "Arial";
 	cursor: pointer;
@@ -55,8 +55,8 @@ body {
 
 .content {
   padding: 0 18px;
-/*   display: none; */
-  display: flex;
+  display: none;
+/*   display: flex; */
   overflow: hidden;
   background-color: #f1f1f1;
 }
